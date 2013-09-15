@@ -17,6 +17,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :inline => 'rsync -rtC /tmp/cupsc /var/www/ --exclude=vagrant --exclude=.vagrant --exclude=.idea'
   config.vm.provision :shell, :inline => 'umount /tmp/cupsc && rm -rf /tmp/cupsc'
   config.vm.provision :shell, :inline => 'chown -R vagrant:vagrant /var/www/cupsc'
+  config.vm.provision :shell, :inline => 'chmod 777 /var/www/cupsc/app/logs && chmod 777 /var/www/cupsc/app/cache'
+
 
   config.vm.provision :shell, :inline =>
     "if [[ ! -f /apt-get-run ]]; then sudo apt-get update && sudo touch /apt-get-run; fi"
