@@ -1,0 +1,3 @@
+home:
+    resource: "@CupscWebBundle/Controller/HomeController.php"
+    type:     annotation

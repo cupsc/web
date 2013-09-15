@@ -1,11 +1,16 @@
 <?php
 
-namespace Acme\DemoBundle\Controller;
+namespace Cupsc\WebBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class WelcomeController extends Controller
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
+class HomeController extends Controller
 {
+    /**
+     * @Route("/", name="home")
+     */
     public function indexAction()
     {
         /*
@@ -13,6 +18,6 @@ class WelcomeController extends Controller
          * or @Template annotation as demonstrated in DemoController.
          *
          */
-        return $this->render('AcmeDemoBundle:Welcome:index.html.twig');
+        return $this->render('CupscWebBundle:Home:index.html.twig');
     }
 }

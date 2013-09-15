@@ -1,0 +1,2 @@
+cupsc_web:
+    resource: "@CupscWebBundle/Resources/config/routing.yml"
