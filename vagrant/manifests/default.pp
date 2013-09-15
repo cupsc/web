@@ -92,7 +92,7 @@ puphpet::ini { 'custom':
   value   => [
     'display_errors = On',
     'error_reporting = -1',
-    'allow_url_fopen = 0',
+    'allow_url_fopen = On',
     'apc.enabled = 1'
   ],
   ini     => '/etc/php5/conf.d/zzz_custom.ini',
